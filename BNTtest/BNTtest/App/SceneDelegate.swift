@@ -15,8 +15,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
         
-        let mainViewController = MainViewController()
-        let navigationController = UINavigationController(rootViewController: mainViewController)
+        let drugsListViewController = DrugsListViewController()
+        let viewModel = DrugsListViewModel()
+        drugsListViewController.viewModel = viewModel
+        let navigationController = UINavigationController(rootViewController: drugsListViewController)
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
