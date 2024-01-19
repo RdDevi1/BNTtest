@@ -10,7 +10,7 @@ import Foundation
 protocol DrugsListViewProtocol: AnyObject {
     var presenter: DrugsListPresenterProtocol! { get }
     
-    func addItemsAt(_ indexPaths: [IndexPath])
+    func addItems(at indexPaths: [IndexPath])
     func reloadItem(at index: Int)
     func reloadCollection()
 }
@@ -23,16 +23,14 @@ protocol DrugsListPresenterProtocol {
 }
 
 final class DrugsListPresenter: DrugsListPresenterProtocol {
+    weak var view: DrugsListViewProtocol!
+    
     var router: RouterProtocol?
     var networkService: NetworkServiceProtocol?
     
     private var drugs: [Drug] = []
     private var lastRequest: String = ""
-    private let lock = NSLock()
-    
-    weak var view: DrugsListViewProtocol!
-    
-    // MARK: - LifeCycle
+
     init(view: DrugsListViewProtocol) {
         self.view = view
     }
@@ -41,7 +39,7 @@ final class DrugsListPresenter: DrugsListPresenterProtocol {
         let nextBatchStartIndex = lastRequest == text ? drugs.count : 0
         networkService?.getItemsOn(query: text, startingFrom: nextBatchStartIndex, amount: 10) { [weak self] result in
             guard let self = self else { return }
-            
+
             switch result {
             case .success(let items):
                 if self.lastRequest != text {
@@ -51,7 +49,7 @@ final class DrugsListPresenter: DrugsListPresenterProtocol {
                 } else {
                     self.drugs.append(contentsOf: items)
                     let indexPaths = (nextBatchStartIndex ..< self.drugs.count).map { IndexPath(item: $0, section: 0) }
-                    self.view.addItemsAt(indexPaths)
+                    self.view.addItems(at: indexPaths)
                 }
                 self.loadImages()
             case .failure(let error):
@@ -61,18 +59,12 @@ final class DrugsListPresenter: DrugsListPresenterProtocol {
     }
     
     private func loadImages() {
-        for (index, drug) in drugs.enumerated() {
+        drugs.enumerated().forEach { index, drug in
             networkService?.downloadImageFor(drug: drug) { [weak self] result in
-                guard let self = self else { return }
+                guard let self = self, case .success(let imageUrl) = result, index < self.drugs.count else { return }
                 
-                switch result {
-                case .success(let imageUrl):
-                    guard index < self.drugs.count else { return }
-                    self.drugs[index].imageURL = imageUrl.absoluteString
-                    self.view.reloadItem(at: index)
-                case .failure:
-                    break
-                }
+                self.drugs[index].imageURL = imageUrl.absoluteString
+                self.view.reloadItem(at: index)
             }
         }
     }
@@ -82,11 +74,13 @@ final class DrugsListPresenter: DrugsListPresenterProtocol {
     }
     
     func requestDataForItem(at indexPath: IndexPath) -> Drug? {
-        return drugs[indexPath.item]
+        return drugs.element(at: indexPath.item)
     }
     
     func didTapOnItem(at indexPath: IndexPath) {
-        router?.showItemDetailModule(drug: drugs[indexPath.item])
+        if let selectedDrug = drugs.element(at: indexPath.item) {
+            router?.showItemDetailModule(drug: selectedDrug)
+        }
     }
 }
 
@@ -99,5 +93,13 @@ extension DrugsListPresenter: ServiceObtainableProtocol {
     func getServices(_ services: [Service : ServiceProtocol]) {
         self.router = services[.router] as? RouterProtocol
         self.networkService = services[.networkService] as? NetworkServiceProtocol
+    }
+}
+
+// Helper extension to safely access array elements
+extension Array {
+    func element(at index: Int) -> Element? {
+        guard index >= 0, index < count else { return nil }
+        return self[index]
     }
 }

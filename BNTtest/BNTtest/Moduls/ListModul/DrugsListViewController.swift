@@ -110,7 +110,7 @@ extension DrugsListViewController: DrugsListViewProtocol {
         }
     }
     
-    func addItemsAt(_ indexPaths: [IndexPath]) {
+    func addItems(at indexPaths: [IndexPath]) {
         DispatchQueue.main.async {
             self.collectionView.insertItems(at: indexPaths)
             print("items inserted")
