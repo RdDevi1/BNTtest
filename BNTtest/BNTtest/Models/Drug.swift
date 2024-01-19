@@ -8,11 +8,14 @@
 import Foundation
 
 struct Drug: Codable {
-    var id: Int
-    var image: String
-    var categories: Category
-    var name: String
-    var description: String
-    var documentation: String
-    var fields: [Field]?
+    let id: Int?
+    var imageURL: String?
+    var categories: Category?
+    let name, description, documentation: String?
+
+    
+    enum CodingKeys: String, CodingKey {
+        case imageURL = "image"
+        case id, name, description, documentation, categories
+    }
 }

@@ -8,10 +8,16 @@
 import Foundation
 
 struct Flag: Codable {
-    var html: Int
-    var noValue: Int
-    var noName: Int
-    var noImage: Int
-    var noWrap: Int
-    var noWrapName: Int
+    let html, noValue, noName, noImage: Int?
+    let noWrap, noWrapName, system: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case html
+        case noValue = "no_value"
+        case noName = "no_name"
+        case noImage = "no_image"
+        case noWrap = "no_wrap"
+        case noWrapName = "no_wrap_name"
+        case system
+    }
 }

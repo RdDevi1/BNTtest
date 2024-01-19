@@ -8,11 +8,22 @@
 import Foundation
 
 struct Field: Codable {
-    var type: String
-    var name: String
-    var value: String
-    var image: String
-    var flags: Flag
-    var show: Int
-    var group: Int
+    let typesID: Int?
+    let type: TypeEnum?
+    let name, value: String?
+    let image: String?
+    let flags: Flag?
+    let show, group: Int?
+
+    enum CodingKeys: String, CodingKey {
+        case typesID = "types_id"
+        case type, name, value, image, flags, show, group
+    }
 }
+
+enum TypeEnum: String, Codable {
+    case image = "image"
+    case list = "list"
+    case text = "text"
+}
+

@@ -9,42 +9,56 @@
 /* Begin PBXBuildFile section */
 		C40EF1D52B52EB1800E6F780 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF1D42B52EB1800E6F780 /* AppDelegate.swift */; };
 		C40EF1D72B52EB1800E6F780 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF1D62B52EB1800E6F780 /* SceneDelegate.swift */; };
-		C40EF1D92B52EB1800E6F780 /* DrugsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF1D82B52EB1800E6F780 /* DrugsListViewController.swift */; };
 		C40EF1DE2B52EB1900E6F780 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C40EF1DD2B52EB1900E6F780 /* Assets.xcassets */; };
 		C40EF1E12B52EB1900E6F780 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C40EF1DF2B52EB1900E6F780 /* LaunchScreen.storyboard */; };
 		C40EF1EE2B52EFA700E6F780 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF1ED2B52EFA700E6F780 /* UICollectionView+Extension.swift */; };
 		C40EF1F02B52F08900E6F780 /* Drug.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF1EF2B52F08900E6F780 /* Drug.swift */; };
-		C40EF1F82B52F2F900E6F780 /* DrugsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF1F72B52F2F900E6F780 /* DrugsListViewModel.swift */; };
 		C40EF1FB2B52F61500E6F780 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF1FA2B52F61500E6F780 /* Category.swift */; };
 		C40EF1FE2B52F8C400E6F780 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C40EF1FD2B52F8C400E6F780 /* SnapKit */; };
 		C40EF2002B52F8C400E6F780 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C40EF1FF2B52F8C400E6F780 /* SnapKit-Dynamic */; };
 		C40EF2032B52F8D000E6F780 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = C40EF2022B52F8D000E6F780 /* Kingfisher */; };
-		C40EF2052B52F9D100E6F780 /* DrugsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF2042B52F9D100E6F780 /* DrugsListCell.swift */; };
-		C40EF2082B52FA7700E6F780 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF2072B52FA7700E6F780 /* Observable.swift */; };
-		C40EF20B2B52FCBE00E6F780 /* NetwrokRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF20A2B52FCBE00E6F780 /* NetwrokRequest.swift */; };
-		C40EF20D2B52FCEC00E6F780 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF20C2B52FCEC00E6F780 /* NetworkClient.swift */; };
 		C40EF2102B53017800E6F780 /* Field.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF20F2B53017800E6F780 /* Field.swift */; };
 		C40EF2122B53044000E6F780 /* Flag.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF2112B53044000E6F780 /* Flag.swift */; };
+		C40EF2192B55B00700E6F780 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF2182B55B00700E6F780 /* NetworkService.swift */; };
+		C40EF21B2B55B2BE00E6F780 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF21A2B55B2BE00E6F780 /* UIColor+Extension.swift */; };
+		C40EF2202B55C36A00E6F780 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF21F2B55C36A00E6F780 /* Router.swift */; };
+		C40EF2262B5856CC00E6F780 /* ModuleBuiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF2252B5856CC00E6F780 /* ModuleBuiler.swift */; };
+		C40EF22F2B58588C00E6F780 /* ServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF22E2B58588C00E6F780 /* ServiceProtocols.swift */; };
+		C40EF2342B585A9700E6F780 /* DrugsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF2332B585A9700E6F780 /* DrugsListViewController.swift */; };
+		C40EF2362B585AC400E6F780 /* DrugCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF2352B585AC400E6F780 /* DrugCell.swift */; };
+		C40EF2392B585B0700E6F780 /* DrugsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF2382B585B0700E6F780 /* DrugsListPresenter.swift */; };
+		C40EF23B2B585B4F00E6F780 /* DrugItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF23A2B585B4F00E6F780 /* DrugItemViewController.swift */; };
+		C40EF23D2B585B7E00E6F780 /* DrugItemPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF23C2B585B7E00E6F780 /* DrugItemPresenter.swift */; };
+		C40EF23F2B585BBC00E6F780 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF23E2B585BBC00E6F780 /* FileManager+Extension.swift */; };
+		C40EF2412B58664A00E6F780 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF2402B58664A00E6F780 /* NavController.swift */; };
+		C40EF2452B596C6D00E6F780 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF2442B596C6D00E6F780 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C40EF1D12B52EB1800E6F780 /* BNTtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BNTtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40EF1D42B52EB1800E6F780 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C40EF1D62B52EB1800E6F780 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C40EF1D82B52EB1800E6F780 /* DrugsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsListViewController.swift; sourceTree = "<group>"; };
 		C40EF1DD2B52EB1900E6F780 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C40EF1E02B52EB1900E6F780 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C40EF1E22B52EB1900E6F780 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C40EF1ED2B52EFA700E6F780 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		C40EF1EF2B52F08900E6F780 /* Drug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drug.swift; sourceTree = "<group>"; };
-		C40EF1F72B52F2F900E6F780 /* DrugsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsListViewModel.swift; sourceTree = "<group>"; };
 		C40EF1FA2B52F61500E6F780 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		C40EF2042B52F9D100E6F780 /* DrugsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsListCell.swift; sourceTree = "<group>"; };
-		C40EF2072B52FA7700E6F780 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		C40EF20A2B52FCBE00E6F780 /* NetwrokRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwrokRequest.swift; sourceTree = "<group>"; };
-		C40EF20C2B52FCEC00E6F780 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		C40EF20F2B53017800E6F780 /* Field.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Field.swift; sourceTree = "<group>"; };
 		C40EF2112B53044000E6F780 /* Flag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flag.swift; sourceTree = "<group>"; };
+		C40EF2182B55B00700E6F780 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		C40EF21A2B55B2BE00E6F780 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		C40EF21F2B55C36A00E6F780 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		C40EF2252B5856CC00E6F780 /* ModuleBuiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuiler.swift; sourceTree = "<group>"; };
+		C40EF22E2B58588C00E6F780 /* ServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocols.swift; sourceTree = "<group>"; };
+		C40EF2332B585A9700E6F780 /* DrugsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsListViewController.swift; sourceTree = "<group>"; };
+		C40EF2352B585AC400E6F780 /* DrugCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugCell.swift; sourceTree = "<group>"; };
+		C40EF2382B585B0700E6F780 /* DrugsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsListPresenter.swift; sourceTree = "<group>"; };
+		C40EF23A2B585B4F00E6F780 /* DrugItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugItemViewController.swift; sourceTree = "<group>"; };
+		C40EF23C2B585B7E00E6F780 /* DrugItemPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugItemPresenter.swift; sourceTree = "<group>"; };
+		C40EF23E2B585BBC00E6F780 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
+		C40EF2402B58664A00E6F780 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
+		C40EF2442B596C6D00E6F780 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,29 +94,59 @@
 		C40EF1D32B52EB1800E6F780 /* BNTtest */ = {
 			isa = PBXGroup;
 			children = (
+				C40EF2242B5856AD00E6F780 /* Router */,
+				C40EF22A2B58572000E6F780 /* Services */,
+				C40EF22D2B58578900E6F780 /* Models */,
+				C40EF2302B585A2F00E6F780 /* Moduls */,
+				C40EF1EC2B52EF4900E6F780 /* Extensions */,
 				C40EF1E22B52EB1900E6F780 /* Info.plist */,
 				C40EF1DD2B52EB1900E6F780 /* Assets.xcassets */,
 				C40EF1DF2B52EB1900E6F780 /* LaunchScreen.storyboard */,
 				C40EF1F22B52F0D300E6F780 /* App */,
-				C40EF1EC2B52EF4900E6F780 /* Extensions */,
-				C40EF2062B52FA5600E6F780 /* Helpers */,
-				C40EF1EA2B52EF2E00E6F780 /* ListFlow */,
-				C40EF1EB2B52EF4100E6F780 /* Models */,
-				C40EF2092B52FC8C00E6F780 /* NetworkClient */,
 			);
 			path = BNTtest;
 			sourceTree = "<group>";
 		};
-		C40EF1EA2B52EF2E00E6F780 /* ListFlow */ = {
+		C40EF1EC2B52EF4900E6F780 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C40EF1F62B52F2DF00E6F780 /* Model */,
-				C40EF1F12B52F0AD00E6F780 /* View */,
+				C40EF1ED2B52EFA700E6F780 /* UICollectionView+Extension.swift */,
+				C40EF21A2B55B2BE00E6F780 /* UIColor+Extension.swift */,
+				C40EF23E2B585BBC00E6F780 /* FileManager+Extension.swift */,
 			);
-			path = ListFlow;
+			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C40EF1EB2B52EF4100E6F780 /* Models */ = {
+		C40EF1F22B52F0D300E6F780 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C40EF1D42B52EB1800E6F780 /* AppDelegate.swift */,
+				C40EF1D62B52EB1800E6F780 /* SceneDelegate.swift */,
+				C40EF2442B596C6D00E6F780 /* Constants.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C40EF2242B5856AD00E6F780 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				C40EF2252B5856CC00E6F780 /* ModuleBuiler.swift */,
+				C40EF21F2B55C36A00E6F780 /* Router.swift */,
+				C40EF2402B58664A00E6F780 /* NavController.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		C40EF22A2B58572000E6F780 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C40EF2182B55B00700E6F780 /* NetworkService.swift */,
+				C40EF22E2B58588C00E6F780 /* ServiceProtocols.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C40EF22D2B58578900E6F780 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				C40EF1EF2B52F08900E6F780 /* Drug.swift */,
@@ -113,55 +157,32 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		C40EF1EC2B52EF4900E6F780 /* Extensions */ = {
+		C40EF2302B585A2F00E6F780 /* Moduls */ = {
 			isa = PBXGroup;
 			children = (
-				C40EF1ED2B52EFA700E6F780 /* UICollectionView+Extension.swift */,
+				C40EF2312B585A3B00E6F780 /* ListModul */,
+				C40EF2322B585A5300E6F780 /* ItemModul */,
 			);
-			path = Extensions;
+			path = Moduls;
 			sourceTree = "<group>";
 		};
-		C40EF1F12B52F0AD00E6F780 /* View */ = {
+		C40EF2312B585A3B00E6F780 /* ListModul */ = {
 			isa = PBXGroup;
 			children = (
-				C40EF1D82B52EB1800E6F780 /* DrugsListViewController.swift */,
-				C40EF2042B52F9D100E6F780 /* DrugsListCell.swift */,
+				C40EF2332B585A9700E6F780 /* DrugsListViewController.swift */,
+				C40EF2352B585AC400E6F780 /* DrugCell.swift */,
+				C40EF2382B585B0700E6F780 /* DrugsListPresenter.swift */,
 			);
-			path = View;
+			path = ListModul;
 			sourceTree = "<group>";
 		};
-		C40EF1F22B52F0D300E6F780 /* App */ = {
+		C40EF2322B585A5300E6F780 /* ItemModul */ = {
 			isa = PBXGroup;
 			children = (
-				C40EF1D42B52EB1800E6F780 /* AppDelegate.swift */,
-				C40EF1D62B52EB1800E6F780 /* SceneDelegate.swift */,
+				C40EF23A2B585B4F00E6F780 /* DrugItemViewController.swift */,
+				C40EF23C2B585B7E00E6F780 /* DrugItemPresenter.swift */,
 			);
-			path = App;
-			sourceTree = "<group>";
-		};
-		C40EF1F62B52F2DF00E6F780 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				C40EF1F72B52F2F900E6F780 /* DrugsListViewModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		C40EF2062B52FA5600E6F780 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				C40EF2072B52FA7700E6F780 /* Observable.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		C40EF2092B52FC8C00E6F780 /* NetworkClient */ = {
-			isa = PBXGroup;
-			children = (
-				C40EF20A2B52FCBE00E6F780 /* NetwrokRequest.swift */,
-				C40EF20C2B52FCEC00E6F780 /* NetworkClient.swift */,
-			);
-			path = NetworkClient;
+			path = ItemModul;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,19 +264,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C40EF2052B52F9D100E6F780 /* DrugsListCell.swift in Sources */,
+				C40EF2262B5856CC00E6F780 /* ModuleBuiler.swift in Sources */,
 				C40EF1EE2B52EFA700E6F780 /* UICollectionView+Extension.swift in Sources */,
-				C40EF1F82B52F2F900E6F780 /* DrugsListViewModel.swift in Sources */,
 				C40EF1F02B52F08900E6F780 /* Drug.swift in Sources */,
-				C40EF1D92B52EB1800E6F780 /* DrugsListViewController.swift in Sources */,
-				C40EF20B2B52FCBE00E6F780 /* NetwrokRequest.swift in Sources */,
+				C40EF22F2B58588C00E6F780 /* ServiceProtocols.swift in Sources */,
+				C40EF21B2B55B2BE00E6F780 /* UIColor+Extension.swift in Sources */,
 				C40EF1D52B52EB1800E6F780 /* AppDelegate.swift in Sources */,
-				C40EF2082B52FA7700E6F780 /* Observable.swift in Sources */,
+				C40EF2362B585AC400E6F780 /* DrugCell.swift in Sources */,
+				C40EF2202B55C36A00E6F780 /* Router.swift in Sources */,
+				C40EF2412B58664A00E6F780 /* NavController.swift in Sources */,
+				C40EF2342B585A9700E6F780 /* DrugsListViewController.swift in Sources */,
 				C40EF2102B53017800E6F780 /* Field.swift in Sources */,
+				C40EF2192B55B00700E6F780 /* NetworkService.swift in Sources */,
 				C40EF1D72B52EB1800E6F780 /* SceneDelegate.swift in Sources */,
 				C40EF2122B53044000E6F780 /* Flag.swift in Sources */,
 				C40EF1FB2B52F61500E6F780 /* Category.swift in Sources */,
-				C40EF20D2B52FCEC00E6F780 /* NetworkClient.swift in Sources */,
+				C40EF2452B596C6D00E6F780 /* Constants.swift in Sources */,
+				C40EF2392B585B0700E6F780 /* DrugsListPresenter.swift in Sources */,
+				C40EF23F2B585BBC00E6F780 /* FileManager+Extension.swift in Sources */,
+				C40EF23D2B585B7E00E6F780 /* DrugItemPresenter.swift in Sources */,
+				C40EF23B2B585B4F00E6F780 /* DrugItemViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 import Foundation
 
 struct Category: Codable {
-    var id: Int
+    let id: Int
     var icon: String?
     var image: String?
     var name: String

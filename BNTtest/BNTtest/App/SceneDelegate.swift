@@ -15,12 +15,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let scene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: scene)
         
-        let drugsListViewController = DrugsListViewController()
-        let viewModel = DrugsListViewModel()
-        drugsListViewController.viewModel = viewModel
-        let navigationController = UINavigationController(rootViewController: drugsListViewController)
-        
-        window?.rootViewController = navigationController
+        let moduleBuilder = ModuleBuilder()
+        let router = moduleBuilder.getRouter()
+        router.window = window
+        router.showListModule()
         window?.makeKeyAndVisible()
     }
 }
