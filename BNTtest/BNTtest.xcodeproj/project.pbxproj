@@ -32,6 +32,7 @@
 		C40EF23F2B585BBC00E6F780 /* FileManager+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF23E2B585BBC00E6F780 /* FileManager+Extension.swift */; };
 		C40EF2412B58664A00E6F780 /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF2402B58664A00E6F780 /* NavController.swift */; };
 		C40EF2452B596C6D00E6F780 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF2442B596C6D00E6F780 /* Constants.swift */; };
+		C40EF2492B5A901800E6F780 /* URLSession+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF2482B5A901800E6F780 /* URLSession+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		C40EF23E2B585BBC00E6F780 /* FileManager+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+Extension.swift"; sourceTree = "<group>"; };
 		C40EF2402B58664A00E6F780 /* NavController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		C40EF2442B596C6D00E6F780 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C40EF2482B5A901800E6F780 /* URLSession+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				C40EF1ED2B52EFA700E6F780 /* UICollectionView+Extension.swift */,
 				C40EF21A2B55B2BE00E6F780 /* UIColor+Extension.swift */,
 				C40EF23E2B585BBC00E6F780 /* FileManager+Extension.swift */,
+				C40EF2482B5A901800E6F780 /* URLSession+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 			files = (
 				C40EF2262B5856CC00E6F780 /* ModuleBuiler.swift in Sources */,
 				C40EF1EE2B52EFA700E6F780 /* UICollectionView+Extension.swift in Sources */,
+				C40EF2492B5A901800E6F780 /* URLSession+Extension.swift in Sources */,
 				C40EF1F02B52F08900E6F780 /* Drug.swift in Sources */,
 				C40EF22F2B58588C00E6F780 /* ServiceProtocols.swift in Sources */,
 				C40EF21B2B55B2BE00E6F780 /* UIColor+Extension.swift in Sources */,

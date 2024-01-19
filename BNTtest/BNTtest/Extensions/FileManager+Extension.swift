@@ -45,6 +45,4 @@ extension FileManager {
         let exists = self.fileExists(atPath: url.path, isDirectory:&isDirectory)
         return exists && isDirectory.boolValue
     }
-    
-   
 }

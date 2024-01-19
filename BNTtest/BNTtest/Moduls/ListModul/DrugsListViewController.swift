@@ -98,12 +98,6 @@ final class DrugsListViewController: UIViewController {
         searchBar.becomeFirstResponder()
     }
     
-//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-//        super.touchesBegan(touches, with: event)
-//        if searchBar.isFirstResponder {
-//            searchBar.resignFirstResponder()
-//        }
-//    }
 }
 
 // MARK: - DrugsListViewProtocol
@@ -222,7 +216,6 @@ extension DrugsListViewController: UISearchBarDelegate {
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        тут таймер потому, что не хочется на каждое изменение слова !сразу! дулать запросы. Пусть юзер введет хоть что-то более менее завершенное.
         if timer != nil {
             timer.invalidate()
             timer = nil

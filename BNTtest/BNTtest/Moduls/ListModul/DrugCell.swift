@@ -49,7 +49,7 @@ final class DrugCell: UICollectionViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
-        imageView.image = nil
+        imageView.image = .none
         nameLabel.text = ""
         descriptionLabel.text = ""
     }
@@ -93,7 +93,6 @@ final class DrugCell: UICollectionViewCell {
     }
     
     func configure(with drug: Drug) {
-        imageView.backgroundColor = .systemGray
         nameLabel.text = drug.name
         descriptionLabel.text = drug.description
         guard
