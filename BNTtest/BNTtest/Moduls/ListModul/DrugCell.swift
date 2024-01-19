@@ -21,20 +21,20 @@ final class DrugCell: UICollectionViewCell {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
-        label.sizeToFit()
-        label.font = .systemFont(ofSize: 13, weight: .semibold)
+        label.font = UIFont(name: "SFProDisplay-Semibold", size: 13)
+        label.setContentHuggingPriority(.required, for: .vertical)
         label.numberOfLines = 0
         label.lineBreakMode = .byWordWrapping
         return label
     }()
     
     private let descriptionLabel: UILabel = {
-        let view = UILabel()
-        view.textColor = UIColor(red: 0.683, green: 0.691, blue: 0.712, alpha: 1)
-        view.font = UIFont(name: "SFProDisplay-Medium", size: 12)
-        view.numberOfLines = 5
-        view.lineBreakMode = .byWordWrapping
-        return view
+        let label = UILabel()
+        label.textColor = UIColor(red: 0.683, green: 0.691, blue: 0.712, alpha: 1)
+        label.font = UIFont(name: "SFProDisplay-Medium", size: 12)
+        label.numberOfLines = 6
+        label.lineBreakMode = .byWordWrapping
+        return label
     }()
     
     // MARK: - LifeCycle

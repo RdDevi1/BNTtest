@@ -30,6 +30,7 @@ final class DrugItemPresenter: DrugItemPresenterProtocol {
         self.view = view
         self.drug = drug
     }
+    
     deinit {
         print("deinited ItemDetailPresenter")
     }
@@ -39,16 +40,17 @@ final class DrugItemPresenter: DrugItemPresenterProtocol {
     }
     
     func getCategoryIcon() {
-        networkService?.downloadCategoryIconFor(drug: drug,
-                                         completion: { result in
+        networkService?.downloadCategoryIconFor(drug: drug) { [weak self] result in
+            guard let self = self else { return }
+            
             switch result {
             case .success(let iconUrl):
                 self.drug.categories?.icon = iconUrl.absoluteString
                 self.view.updateCategoriesIcon(iconUrl.absoluteString)
-            case .failure(_):
-                return
+            case .failure:
+                break
             }
-        })
+        }
     }
 }
 
@@ -59,7 +61,7 @@ extension DrugItemPresenter: ServiceObtainableProtocol {
     }
     
     func getServices(_ services: [Service : ServiceProtocol]) {
-        self.router = (services[.router] as! RouterProtocol)
-        self.networkService = (services[.networkService] as! NetworkServiceProtocol)
+        self.router = services[.router] as? RouterProtocol
+        self.networkService = services[.networkService] as? NetworkServiceProtocol
     }
 }

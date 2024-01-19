@@ -12,7 +12,7 @@ extension UIColor {
     static let bnet = BnetColors()
     
     struct BnetColors {
-         let green = UIColor(named: "green")
+         let mainGreen = UIColor(named: "mainGreen")
          let lightGray = UIColor(named: "lightGray")
          let borderColor = UIColor(named: "borderColor")
     }
