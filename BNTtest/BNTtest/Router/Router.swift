@@ -9,55 +9,52 @@ import UIKit
 
 protocol RouterProtocol {
     var window: UIWindow? { get }
-    
+
     func showListModule()
     func showItemDetailModule(drug: Drug)
 }
 
-final class Router: RouterProtocol {
+final class Router: RouterProtocol, ServiceObtainableProtocol {
+    
     weak var window: UIWindow?
-    private var navigation: NavigationController?
+    var navigation: NavigationController?
     
     var moduleBuilder: ModuleBuilderProtocol?
-    
-    func showListModule() {
-        if navigation != nil {
-            window?.rootViewController = navigation
-            print("showing ListModule")
-        } else if let listVC = moduleBuilder?.createListModule() {
-            navigation = NavigationController(rootViewController: listVC)
-            print("created ListModule")
-            showListModule()
-        } else { print("Error while creating ListModule") }
+
+    var neededServices: [Service] {
+        return [.moduleBuilder]
     }
-    
-    func showItemDetailModule(drug: Drug) {
-        if navigation == nil {
-            print("somehow ItemDetailModule precedes ListModule")
-            showListModule()
-            showItemDetailModule(drug: drug)
-        } else if let detailVC = moduleBuilder?.createItemDetailModule(drug: drug) {
-            navigation?.pushViewController(detailVC, animated: true)
-            print("showing ItemDetailModule")
-        } else {
-            print("Error while showing ItemDetailModule")
+
+    func getServices(_ services: [Service: ServiceProtocol]) {
+        self.moduleBuilder = services[.moduleBuilder] as? ModuleBuilderProtocol
+    }
+
+    func showListModule() {
+        guard let navigation = self.navigation else {
+            let listVC = moduleBuilder?.createListModule()
+            self.navigation = NavigationController(rootViewController: listVC!)
+            print("ListModule created")
+            return
         }
+
+        window?.rootViewController = navigation
+        print("ListModule shown")
+    }
+
+    func showItemDetailModule(drug: Drug) {
+        guard let navigation = self.navigation, let detailVC = moduleBuilder?.createItemDetailModule(drug: drug) else {
+            print("Error while showing ItemDetailModule")
+            return
+        }
+
+        navigation.pushViewController(detailVC, animated: true)
+        print("ItemDetailModule shown")
     }
 }
 
+    // MARK: - ServiceProtocol
 extension Router: ServiceProtocol {
     var description: String {
         return "Router"
     }
 }
-
-extension Router: ServiceObtainableProtocol {
-    var neededServices: [Service] {
-        return  [.moduleBuilder]
-    }
-    
-    func getServices(_ services: [Service : ServiceProtocol]) {
-        self.moduleBuilder = (services[.moduleBuilder] as! ModuleBuilderProtocol)
-    }
-}
-

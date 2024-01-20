@@ -23,7 +23,6 @@
 		C40EF21B2B55B2BE00E6F780 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF21A2B55B2BE00E6F780 /* UIColor+Extension.swift */; };
 		C40EF2202B55C36A00E6F780 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF21F2B55C36A00E6F780 /* Router.swift */; };
 		C40EF2262B5856CC00E6F780 /* ModuleBuiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF2252B5856CC00E6F780 /* ModuleBuiler.swift */; };
-		C40EF22F2B58588C00E6F780 /* ServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF22E2B58588C00E6F780 /* ServiceProtocols.swift */; };
 		C40EF2342B585A9700E6F780 /* DrugsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF2332B585A9700E6F780 /* DrugsListViewController.swift */; };
 		C40EF2362B585AC400E6F780 /* DrugCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF2352B585AC400E6F780 /* DrugCell.swift */; };
 		C40EF2392B585B0700E6F780 /* DrugsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40EF2382B585B0700E6F780 /* DrugsListPresenter.swift */; };
@@ -51,7 +50,6 @@
 		C40EF21A2B55B2BE00E6F780 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		C40EF21F2B55C36A00E6F780 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		C40EF2252B5856CC00E6F780 /* ModuleBuiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuiler.swift; sourceTree = "<group>"; };
-		C40EF22E2B58588C00E6F780 /* ServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocols.swift; sourceTree = "<group>"; };
 		C40EF2332B585A9700E6F780 /* DrugsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsListViewController.swift; sourceTree = "<group>"; };
 		C40EF2352B585AC400E6F780 /* DrugCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugCell.swift; sourceTree = "<group>"; };
 		C40EF2382B585B0700E6F780 /* DrugsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugsListPresenter.swift; sourceTree = "<group>"; };
@@ -144,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				C40EF2182B55B00700E6F780 /* NetworkService.swift */,
-				C40EF22E2B58588C00E6F780 /* ServiceProtocols.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -271,7 +268,6 @@
 				C40EF1EE2B52EFA700E6F780 /* UICollectionView+Extension.swift in Sources */,
 				C40EF2492B5A901800E6F780 /* URLSession+Extension.swift in Sources */,
 				C40EF1F02B52F08900E6F780 /* Drug.swift in Sources */,
-				C40EF22F2B58588C00E6F780 /* ServiceProtocols.swift in Sources */,
 				C40EF21B2B55B2BE00E6F780 /* UIColor+Extension.swift in Sources */,
 				C40EF1D52B52EB1800E6F780 /* AppDelegate.swift in Sources */,
 				C40EF2362B585AC400E6F780 /* DrugCell.swift in Sources */,

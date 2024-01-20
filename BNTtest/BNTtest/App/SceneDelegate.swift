@@ -16,9 +16,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: scene)
         
         let moduleBuilder = ModuleBuilder()
-        let router = moduleBuilder.getRouter()
+        
+        guard let router = moduleBuilder.getRouter() else {
+            print("Error while getting router")
+            return
+        }
+        
+        let listVC = moduleBuilder.createListModule()
+        let navigationController = NavigationController(rootViewController: listVC)
+        
         router.window = window
+        router.navigation = navigationController
         router.showListModule()
+        
+        window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
+
 }
